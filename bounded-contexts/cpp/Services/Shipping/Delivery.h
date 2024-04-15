@@ -14,13 +14,13 @@ namespace Services::Shipping
 
         const Catalog::Service &getService() { return catalogService; }
 
-        double calculateOrderWeight(ShoppingCart::Cart cart)
+        double calculateOrderWeight(ShoppingCart::Cart& cart)
         {
             int orderWeight = 0;
 
-            for (auto& item : cart.getItems())
+            for (const auto& item : cart.getItems())
             {
-                orderWeight += item.quantity * catalogService.loadItem(item.itemId).weight;
+                orderWeight += item.quantity * /*catalogService.loadItem(item.itemId).weight;*/ catalogService.getWeight(item.itemId);
             }
             return orderWeight;
         }

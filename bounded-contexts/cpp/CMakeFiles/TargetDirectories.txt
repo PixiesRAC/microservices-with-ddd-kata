@@ -1,0 +1,3 @@
+/home/pixies/FORMATION_GIT/microservices-with-ddd-kata/bounded-contexts/cpp/CMakeFiles/a.out.dir
+/home/pixies/FORMATION_GIT/microservices-with-ddd-kata/bounded-contexts/cpp/CMakeFiles/edit_cache.dir
+/home/pixies/FORMATION_GIT/microservices-with-ddd-kata/bounded-contexts/cpp/CMakeFiles/rebuild_cache.dir

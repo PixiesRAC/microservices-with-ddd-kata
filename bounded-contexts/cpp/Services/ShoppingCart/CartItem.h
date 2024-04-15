@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Entities/ItemId.h"
+#include "Services/Catalog/ItemId.h"
 
 namespace Services::ShoppingCart
 {
@@ -8,13 +8,12 @@ namespace Services::ShoppingCart
     {
         public:
 
-        CartItem(Entities::ItemId& itemId, int quantity)
+        CartItem(const Services::Catalog::ItemId& itemId, int quantity) : itemId(itemId)
         {
-            this->itemId = itemId;
             this->quantity = quantity;
         }
 
-        Entities::ItemId    itemId;
-        int                 quantity;
+        const Services::Catalog::ItemId         &itemId;
+        int                                     quantity;
     };
 }
